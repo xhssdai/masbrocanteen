@@ -13,11 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('table_tenant', function (Blueprint $table) {
+        Schema::create('food', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('no_hp');
-            $table->string('owner');
+            $table->integer('price');
+            $table->unsignedBigInteger('category');
+            $table->foreign('category')->references('id')->on('category');
+            $table->string('gambar');
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_tenant');
+        Schema::dropIfExists('table_food');
     }
 };

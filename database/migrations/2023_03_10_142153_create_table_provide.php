@@ -19,7 +19,7 @@ return new class extends Migration
             $table->unsignedBigInteger('id_tenant');
 
             $table->foreign('id_food')->references('id')->on('food');
-            $table->foreign('id-tenant')->references('id')->on('tenant');
+            $table->foreign('id_tenant')->references('id')->on('tenant');
             $table->timestamps();
         });
     }

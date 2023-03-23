@@ -13,7 +13,11 @@ class Tenant extends Model
 
     protected $fillable = [
         'name',
-        'no_hp',
-        'owner',
+        'gambar',
     ];
+
+    public function foods()
+    {
+        return $this->belongsToMany(Food::class, 'provide', 'id_tenant', 'id_food')->withTimestamps();
+    }
 }

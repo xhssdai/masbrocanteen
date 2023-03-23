@@ -11,7 +11,10 @@ class Transaction extends Model
 
     protected $table = 'transaction';
     protected $fillable = [
+        'id_food',
+        'id_customer',
         'number_of_chair',
         'status'
     ];
+    
 }
