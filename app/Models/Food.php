@@ -15,7 +15,8 @@ class Food extends Model
         'name',
         'price',
         'category',
-        'gambar'
+        'gambar',
+        
     ];
 
     public function customer(){

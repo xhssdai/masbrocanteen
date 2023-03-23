@@ -18,6 +18,6 @@ class Tenant extends Model
 
     public function foods()
     {
-        return $this->belongsToMany(Food::class, 'provide', 'id_tenant', 'id_food')->withTimestamps();
+        return $this->hasMany(Food::class);
     }
 }

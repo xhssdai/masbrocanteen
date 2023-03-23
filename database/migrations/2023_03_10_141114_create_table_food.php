@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('price');
             $table->unsignedBigInteger('category');
             $table->foreign('category')->references('id')->on('category');
-            $table->unsignedBigInteger('tenant');
+            $table->unsignedBigInteger('tenant_id');
             $table->foreign('tenant')->references('id')->on('tenant');
             $table->string('gambar');
             $table->timestamps();
