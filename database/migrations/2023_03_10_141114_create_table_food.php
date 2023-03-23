@@ -20,7 +20,7 @@ return new class extends Migration
             $table->unsignedBigInteger('category');
             $table->foreign('category')->references('id')->on('category');
             $table->unsignedBigInteger('tenant_id');
-            $table->foreign('tenant')->references('id')->on('tenant');
+            $table->foreign('tenant_id')->references('id')->on('tenant');
             $table->string('gambar');
             $table->timestamps();
         });

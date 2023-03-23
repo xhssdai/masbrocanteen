@@ -16,13 +16,13 @@ class Food extends Model
         'price',
         'category',
         'gambar',
-        
+        'tenant_id'
     ];
 
     public function customer(){
         return $this->belongsToMany(Customer::class, 'transaction', 'id_food', 'id_customer');
     }
     public function tenant(){
-        return $this->belongsToMany(Tenant::class, 'provide', 'id_food', 'id_tenant');
+        return $this->belongsTo(Tenant::class);
     }
 }
