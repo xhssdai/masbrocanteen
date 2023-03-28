@@ -16,6 +16,6 @@ class TenantController extends Controller
 
     function getFood($id){
         $foods = Tenant::with('foods')->findOrFail($id);
-        return response()->json($foods, 200);
+        return new TenantFoodsResource($foods);
     }
 }
